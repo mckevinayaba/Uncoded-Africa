@@ -445,6 +445,35 @@
 </head>
 <body>
   <!-- Navigation -->
+  <nav id="main-nav" style="position: fixed; top: 0; left: 0; right: 0; z-index: 9999; background: rgba(15, 26, 47, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.1); padding: 0 24px; height: 80px; display: flex; align-items: center; justify-content: space-between;">
+  <div style="display: flex; align-items: center;">
+    <svg style="height: 60px; width: auto;" viewBox="0 0 320 80" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:#FFD700"/>
+          <stop offset="50%" style="stop-color:#4CAF50"/>
+          <stop offset="100%" style="stop-color:#00BCD4"/>
+        </linearGradient>
+      </defs>
+      <path d="M8 12 L8 45 Q8 58 18 58 Q28 58 28 45 L28 12" stroke="url(#logoGradient)" stroke-width="6" fill="none" stroke-linecap="round"/>
+      <circle cx="18" cy="12" r="3" fill="url(#logoGradient)"/>
+      <path d="M38 58 L48 12 L58 58" stroke="url(#logoGradient)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M43 40 L53 40" stroke="url(#logoGradient)" stroke-width="6" fill="none" stroke-linecap="round"/>
+      <circle cx="48" cy="12" r="3" fill="url(#logoGradient)"/>
+      <text x="70" y="35" font-family="Poppins, sans-serif" font-weight="700" font-size="20" fill="#FF9D00">UNCODED</text>
+      <text x="85" y="55" font-family="Poppins, sans-serif" font-weight="700" font-size="20" fill="#FFFFFF">AFRICA</text>
+    </svg>
+  </div>
+  
+  <div style="display: flex; align-items: center; gap: 32px;">
+    <a href="#about" style="color: white; text-decoration: none; font-size: 16px; transition: color 0.3s;" onmouseover="this.style.color='#FFD700'" onmouseout="this.style.color='white'">About</a>
+    <a href="#program" style="color: white; text-decoration: none; font-size: 16px; transition: color 0.3s;" onmouseover="this.style.color='#FFD700'" onmouseout="this.style.color='white'">Program</a>
+    <a href="#awards" style="color: white; text-decoration: none; font-size: 16px; transition: color 0.3s;" onmouseover="this.style.color='#FFD700'" onmouseout="this.style.color='white'">Awards</a>
+    <a href="#challenges" style="color: white; text-decoration: none; font-size: 16px; transition: color 0.3s;" onmouseover="this.style.color='#FFD700'" onmouseout="this.style.color='white'">Challenges</a>
+    <a href="#networking" style="color: white; text-decoration: none; font-size: 16px; transition: color 0.3s;" onmouseover="this.style.color='#FFD700'" onmouseout="this.style.color='white'">Networking</a>
+    <a href="#get-involved" style="color: #FFD700; text-decoration: none; font-size: 16px; padding: 12px 24px; background: linear-gradient(90deg, #FFD700, #4CAF50); color: #0F1A2F; border-radius: 10px; font-weight: 600; transition: all 0.3s;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 25px rgba(255, 215, 0, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">Get Ticket</a>
+  </div>
+</nav>
   <nav class="fixed top-0 w-full z-50 glass-card" style="display: block !important; background: rgba(15, 26, 47, 0.95) !important; backdrop-filter: blur(10px) !important; border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important; height: 80px !important; visibility: visible !important;">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-20">
