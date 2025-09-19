@@ -1,0 +1,2727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="page-title">Uncoded Africa 2026 - Africa's Premier No-Code Summit</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0F1A2F;
+      --bg-light: #1a2744;
+      --gradient-yellow: #FFD700;
+      --gradient-green: #4CAF50;
+      --gradient-blue: #00BCD4;
+      --accent-orange: #FF9D00;
+      --text-white: #FFFFFF;
+      --text-muted: #E0E0E0;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-light) 50%, var(--bg-dark) 100%);
+      color: var(--text-white);
+    }
+    
+    .heading-font {
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    .gradient-text {
+      background: linear-gradient(90deg, var(--gradient-yellow), var(--gradient-green), var(--gradient-blue));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .gradient-bg {
+      background: linear-gradient(90deg, var(--gradient-yellow), var(--gradient-green), var(--gradient-blue));
+    }
+    
+    .glass-card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+    }
+    
+    .btn-primary {
+      background: linear-gradient(90deg, var(--gradient-yellow), var(--gradient-green));
+      color: var(--bg-dark);
+      border: none;
+      padding: 14px 28px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-family: 'Poppins', sans-serif;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+      background: linear-gradient(90deg, var(--gradient-green), var(--gradient-blue));
+    }
+    
+    .btn-secondary {
+      background: transparent;
+      color: var(--gradient-yellow);
+      border: 2px solid var(--gradient-yellow);
+      padding: 12px 26px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-family: 'Poppins', sans-serif;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+    }
+    
+    .btn-secondary:hover {
+      background: linear-gradient(90deg, var(--gradient-yellow), var(--gradient-green));
+      color: var(--bg-dark);
+      border-color: transparent;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 215, 0, 0.3);
+    }
+    
+    .floating-element {
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+    
+    .section-padding {
+      padding: 5rem 1rem;
+    }
+    
+    @media (max-width: 768px) {
+      .section-padding {
+        padding: 3rem 1rem;
+      }
+    }
+    
+    .form-input {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: white;
+      padding: 14px 18px;
+      border-radius: 12px;
+      width: 100%;
+      transition: all 0.3s ease;
+      font-family: 'Inter', sans-serif;
+    }
+    
+    .form-input:focus {
+      outline: none;
+      border-color: var(--gradient-yellow);
+      background: rgba(255, 255, 255, 0.15);
+      box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.2);
+    }
+    
+    .form-input::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+    
+    .form-select {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: white;
+      padding: 14px 18px;
+      border-radius: 12px;
+      width: 100%;
+      transition: all 0.3s ease;
+      font-family: 'Inter', sans-serif;
+    }
+    
+    .form-select:focus {
+      outline: none;
+      border-color: var(--gradient-yellow);
+      background: rgba(255, 255, 255, 0.15);
+      box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.2);
+    }
+    
+    .form-textarea {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: white;
+      padding: 14px 18px;
+      border-radius: 12px;
+      width: 100%;
+      min-height: 120px;
+      resize: vertical;
+      transition: all 0.3s ease;
+      font-family: 'Inter', sans-serif;
+    }
+    
+    .form-textarea:focus {
+      outline: none;
+      border-color: var(--gradient-yellow);
+      background: rgba(255, 255, 255, 0.15);
+      box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.2);
+    }
+    
+    .form-textarea::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+    
+    .stats-counter {
+      font-size: 3rem;
+      font-weight: 800;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(90deg, var(--gradient-yellow), var(--gradient-green), var(--gradient-blue));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background: var(--bg-dark);
+      min-width: 250px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+      z-index: 1000;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 215, 0, 0.2);
+      top: 100%;
+      left: 0;
+    }
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    
+    .dropdown-content a {
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      transition: all 0.3s ease;
+      border-radius: 8px;
+      margin: 4px;
+      cursor: pointer;
+    }
+    
+    .dropdown-content a:hover {
+      background: linear-gradient(90deg, var(--gradient-yellow), var(--gradient-green));
+      color: var(--bg-dark);
+    }
+    
+    .mobile-menu {
+      display: none;
+    }
+    
+    .mobile-menu.active {
+      display: block;
+    }
+    
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+    
+    .logo-svg {
+      height: 80px;
+      width: auto;
+    }
+    
+    @media (max-width: 1024px) {
+      .logo-svg {
+        height: 70px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .logo-svg {
+        height: 60px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .logo-svg {
+        height: 50px;
+      }
+    }
+    
+    .footer-logo {
+      height: 60px;
+      width: auto;
+      margin-bottom: 1rem;
+    }
+    
+    .icon-gradient {
+      background: linear-gradient(90deg, var(--gradient-yellow), var(--gradient-green), var(--gradient-blue));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .nav-link {
+      position: relative;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    
+    .nav-link:hover {
+      color: var(--gradient-yellow);
+    }
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background: linear-gradient(90deg, var(--gradient-yellow), var(--gradient-green));
+      transition: width 0.3s ease;
+    }
+    
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    
+    .page-content {
+      display: none;
+    }
+    
+    .page-content.active {
+      display: block;
+    }
+    
+    .success-message {
+      background: linear-gradient(90deg, var(--gradient-green), var(--gradient-blue));
+      color: white;
+      padding: 16px 24px;
+      border-radius: 12px;
+      margin: 16px 0;
+      display: none;
+      font-weight: 500;
+    }
+    
+    .success-message.active {
+      display: block;
+    }
+    
+    .error-message {
+      background: linear-gradient(90deg, #ef4444, #dc2626);
+      color: white;
+      padding: 16px 24px;
+      border-radius: 12px;
+      margin: 16px 0;
+      display: none;
+      font-weight: 500;
+    }
+    
+    .error-message.active {
+      display: block;
+    }
+    
+    .honeypot {
+      position: absolute;
+      left: -9999px;
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+    }
+    
+    .checkbox-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    
+    .checkbox-item {
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+      margin-bottom: 8px;
+    }
+    
+    .checkbox-item input[type="checkbox"] {
+      margin-right: 8px;
+    }
+    
+    .guardian-consent {
+      display: none;
+      background: rgba(255, 193, 7, 0.1);
+      border: 1px solid rgba(255, 193, 7, 0.3);
+      border-radius: 8px;
+      padding: 12px;
+      margin-top: 12px;
+    }
+    
+    .guardian-consent.visible {
+      display: block;
+    }
+    
+    .form-note {
+      background: rgba(255, 193, 7, 0.1);
+      border: 1px solid rgba(255, 193, 7, 0.3);
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 20px;
+      color: #fbbf24;
+      text-align: center;
+      font-size: 14px;
+    }
+    
+    .accordion-item {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      margin-bottom: 16px;
+    }
+    
+    .accordion-header {
+      background: rgba(255, 255, 255, 0.05);
+      border: none;
+      color: white;
+      padding: 20px;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 18px;
+      transition: all 0.3s ease;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .accordion-header:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+    
+    .accordion-header.active {
+      background: rgba(255, 215, 0, 0.1);
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+    
+    .accordion-content {
+      display: none;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.03);
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+    
+    .accordion-content.active {
+      display: block;
+    }
+    
+    .accordion-icon {
+      transition: transform 0.3s ease;
+    }
+    
+    .accordion-header.active .accordion-icon {
+      transform: rotate(180deg);
+    }
+    
+    /* Sticky CTA Overlap Prevention */
+    .has-sticky-cta { 
+      padding-bottom: 84px; 
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full z-50 glass-card">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <div class="flex items-center">
+          <div class="logo-container">
+            <a href="/" onclick="navigate('/')" class="nav-link">
+              <svg class="logo-svg" viewBox="0 0 320 80" xmlns="http://www.w3.org/2000/svg">
+                <!-- Creative UA Symbol -->
+                <defs>
+                  <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#FFD700"/>
+                    <stop offset="50%" style="stop-color:#4CAF50"/>
+                    <stop offset="100%" style="stop-color:#00BCD4"/>
+                  </linearGradient>
+                </defs>
+                
+                <!-- Creative U shape with curved flourish -->
+                <path d="M8 12 L8 45 Q8 58 18 58 Q28 58 28 45 L28 12" 
+                      stroke="url(#logoGradient)" stroke-width="6" fill="none" stroke-linecap="round"/>
+                <circle cx="18" cy="12" r="3" fill="url(#logoGradient)"/>
+                
+                <!-- Creative A shape with stylized peak -->
+                <path d="M38 58 L48 12 L58 58" 
+                      stroke="url(#logoGradient)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M43 40 L53 40" 
+                      stroke="url(#logoGradient)" stroke-width="6" fill="none" stroke-linecap="round"/>
+                <circle cx="48" cy="12" r="3" fill="url(#logoGradient)"/>
+                
+                <!-- UNCODED text positioned very close -->
+                <text x="70" y="35" font-family="Poppins, sans-serif" font-weight="700" font-size="20" fill="#FF9D00">UNCODED</text>
+                
+                <!-- AFRICA text starting under N -->
+                <text x="85" y="55" font-family="Poppins, sans-serif" font-weight="700" font-size="20" fill="#FFFFFF">AFRICA</text>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Desktop Navigation -->
+        <div class="hidden lg:block">
+          <div class="ml-10 flex items-baseline space-x-8">
+            <a href="#about" onclick="scrollToSection('about')" class="nav-link">About</a>
+            <div class="dropdown">
+              <a href="#program" onclick="scrollToSection('program')" class="nav-link cursor-pointer">Program <i class="fas fa-chevron-down ml-1 text-xs"></i></a>
+              <div class="dropdown-content">
+                <a href="#program" onclick="scrollToSection('program')">7-Day Journey</a>
+                <a href="#vibe-coding" onclick="scrollToSection('program')">Vibe Coding</a>
+              </div>
+            </div>
+            <a href="#awards" onclick="scrollToSection('awards')" class="nav-link">Awards</a>
+            
+            <div class="dropdown">
+              <a href="#challenges" onclick="scrollToSection('challenges')" class="nav-link cursor-pointer">Challenges <i class="fas fa-chevron-down ml-1 text-xs"></i></a>
+              <div class="dropdown-content">
+                <a href="#challenges" onclick="scrollToSection('challenges')">Uncoders Games</a>
+                <a href="#challenges" onclick="scrollToSection('challenges')">Impact NoCode Hackathon</a>
+                <a href="#challenges" onclick="scrollToSection('challenges')">Startup Pitch</a>
+                <a href="#challenges" onclick="scrollToSection('challenges')">Vibe Coding Challenge</a>
+              </div>
+            </div>
+            
+            <div class="dropdown">
+              <a href="#networking" onclick="scrollToSection('networking')" class="nav-link cursor-pointer">Networking <i class="fas fa-chevron-down ml-1 text-xs"></i></a>
+              <div class="dropdown-content">
+                <a href="#networking" onclick="scrollToSection('networking')">Meet & Match Enterprises</a>
+                <a href="#networking" onclick="scrollToSection('networking')">Meet & Match SMEs</a>
+                <a href="#networking" onclick="scrollToSection('networking')">Founders Gathering</a>
+              </div>
+            </div>
+            
+            <div class="dropdown">
+              <a href="#why-attend" onclick="scrollToSection('why-attend')" class="nav-link cursor-pointer">Why Attend? <i class="fas fa-chevron-down ml-1 text-xs"></i></a>
+              <div class="dropdown-content">
+                <a href="#why-attend" onclick="scrollToSection('why-attend')">Why Uncoded Africa?</a>
+                <a href="#why-attend" onclick="scrollToSection('why-attend')">All Participants</a>
+                <a href="#why-attend" onclick="scrollToSection('why-attend')">CEOs & Founders</a>
+                <a href="#why-attend" onclick="scrollToSection('why-attend')">Students</a>
+                <a href="#why-attend" onclick="scrollToSection('why-attend')">Job Seekers</a>
+              </div>
+            </div>
+            
+            <div class="dropdown">
+              <a href="#get-involved" onclick="scrollToSection('get-involved')" class="nav-link cursor-pointer">Get Involved <i class="fas fa-chevron-down ml-1 text-xs"></i></a>
+              <div class="dropdown-content">
+                <a href="/tickets" onclick="navigate('/tickets')">Buy Your Ticket</a>
+                <a href="/sponsor" onclick="navigate('/sponsor')">Sponsor Us</a>
+                <a href="/speak" onclick="navigate('/speak')">Become a Speaker</a>
+                <a href="/volunteer" onclick="navigate('/volunteer')">Volunteer</a>
+                <a href="/ambassador" onclick="navigate('/ambassador')">Ambassador</a>
+                <a href="/press" onclick="navigate('/press')">Press</a>
+              </div>
+            </div>
+            
+            <div class="dropdown">
+              <a href="/help/contact" onclick="navigate('/help/contact')" class="nav-link cursor-pointer">Help <i class="fas fa-chevron-down ml-1 text-xs"></i></a>
+              <div class="dropdown-content">
+                <a href="/help/contact" onclick="navigate('/help/contact')">Contact</a>
+                <a href="/help/faqs" onclick="navigate('/help/faqs')">FAQs</a>
+                <a href="/help/visa-support" onclick="navigate('/help/visa-support')">Visa Support</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Mobile menu button -->
+        <div class="lg:hidden">
+          <button id="mobile-menu-btn" class="text-white">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Mobile Navigation -->
+      <div id="mobile-menu" class="mobile-menu lg:hidden bg-gray-900 rounded-lg mt-2 p-4">
+        <a href="#about" onclick="scrollToSection('about')" class="block py-3 nav-link">About</a>
+        <a href="#program" onclick="scrollToSection('program')" class="block py-3 nav-link">Program</a>
+        <a href="#awards" onclick="scrollToSection('awards')" class="block py-3 nav-link">Awards</a>
+        <a href="#challenges" onclick="scrollToSection('challenges')" class="block py-3 nav-link">Challenges</a>
+        <a href="#networking" onclick="scrollToSection('networking')" class="block py-3 nav-link">Networking</a>
+        <a href="/tickets" onclick="navigate('/tickets')" class="block py-3 nav-link">Get Tickets</a>
+        <a href="/help/contact" onclick="navigate('/help/contact')" class="block py-3 nav-link">Help</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HOME PAGE -->
+  <div id="home-page" class="page-content active">
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
+      <div class="absolute inset-0 opacity-10">
+        <div class="floating-element absolute top-20 left-10 w-20 h-20 bg-orange-500 rounded-full"></div>
+        <div class="floating-element absolute top-40 right-20 w-16 h-16 bg-green-500 rounded-full" style="animation-delay: -2s;"></div>
+        <div class="floating-element absolute bottom-40 left-1/4 w-12 h-12 bg-blue-500 rounded-full" style="animation-delay: -4s;"></div>
+      </div>
+      
+      <div class="max-w-6xl mx-auto px-4 text-center relative z-10">
+        <h1 class="text-5xl md:text-7xl font-bold heading-font mb-6">
+          <span class="gradient-text">UNCODED</span><br>
+          <span class="text-white">AFRICA</span>
+        </h1>
+        <p class="text-xl md:text-3xl mb-4 text-gray-300 heading-font font-medium">
+          Africa's Premier No Code and Low Code Summit and Awards
+        </p>
+        <div class="mb-8">
+          <div class="text-lg md:text-xl text-gray-400 mb-2">
+            <i class="fas fa-calendar-alt mr-2 text-orange-400"></i>
+            March 30 - April 5, 2026
+          </div>
+          <div class="text-lg md:text-xl text-gray-400 mb-2">
+            <i class="fas fa-map-marker-alt mr-2 text-orange-400"></i>
+            Johannesburg, South Africa
+          </div>
+          <div class="text-lg md:text-xl text-gray-400">
+            <i class="fas fa-users mr-2 text-orange-400"></i>
+            1,000 in person • 5,000 connected virtually across Africa
+          </div>
+        </div>
+        <p class="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed">
+          A <span class="text-orange-400 font-semibold">7-day transformation journey</span> where you build live, guided by real people who've done it before.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/tickets" onclick="navigate('/tickets')" class="btn-primary text-lg px-8 py-4">Get Your Ticket</a>
+          <a href="#program" onclick="scrollToSection('program')" class="btn-secondary text-lg px-8 py-4">Explore Program</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section-padding bg-black bg-opacity-30">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div>
+            <div class="stats-counter heading-font">7</div>
+            <div class="text-gray-300 text-lg">Days of Transformation</div>
+          </div>
+          <div>
+            <div class="stats-counter heading-font">16</div>
+            <div class="text-gray-300 text-lg">Award Categories</div>
+          </div>
+          <div>
+            <div class="stats-counter heading-font">1M</div>
+            <div class="text-gray-300 text-lg">Africans to Train by 2030</div>
+          </div>
+          <div>
+            <div class="stats-counter heading-font">250K</div>
+            <div class="text-gray-300 text-lg">New Businesses by 2030</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold heading-font mb-6">
+            <span class="gradient-text">About Uncoded Africa</span>
+          </h2>
+          <div class="w-24 h-1 gradient-bg mx-auto mb-8"></div>
+        </div>
+        
+        <!-- Why We Exist -->
+        <div class="mb-16">
+          <h3 class="text-3xl md:text-4xl font-bold heading-font mb-8 text-orange-400">Why We Exist</h3>
+          <div class="glass-card p-8 mb-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center mb-8">
+              <div>
+                <div class="text-3xl md:text-4xl font-bold text-red-400 mb-2">10-12M</div>
+                <div class="text-gray-300 text-sm md:text-base">African graduates yearly</div>
+              </div>
+              <div>
+                <div class="text-3xl md:text-4xl font-bold text-red-400 mb-2">3M</div>
+                <div class="text-gray-300 text-sm md:text-base">Jobs created across Africa</div>
+              </div>
+              <div>
+                <div class="text-3xl md:text-4xl font-bold text-red-400 mb-2">60%+</div>
+                <div class="text-gray-300 text-sm md:text-base">Youth unemployment (many countries)</div>
+              </div>
+              <div>
+                <div class="text-3xl md:text-4xl font-bold text-red-400 mb-2">32.9%</div>
+                <div class="text-gray-300 text-sm md:text-base">South Africa unemployment</div>
+              </div>
+            </div>
+            <p class="text-lg leading-relaxed text-gray-300 mb-6">
+              Africa produces 10–12 million graduates every year, but only 3 million jobs are created. Youth unemployment in many countries exceeds 60%. In South Africa, where Uncoded Africa launches, the unemployment rate is 32.9%, with youth unemployment at 62.4%.
+            </p>
+            <p class="text-lg leading-relaxed text-gray-300 mb-6">
+              Millions of talented Africans remain without opportunities, not because they lack ambition, but because traditional systems cannot absorb them. Many believe they cannot start businesses because they lack coding skills, advanced degrees, or technical training.
+            </p>
+            <p class="text-lg leading-relaxed text-gray-300">
+              <strong>Uncoded Africa exists for:</strong> Students and dropouts • Job seekers and career changers • People stuck in jobs they don't love • Anyone who wants to solve Africa's challenges but doesn't know where to start.
+            </p>
+          </div>
+          <div class="text-center">
+            <p class="text-xl md:text-2xl font-bold text-orange-400 mb-4">This is not another conference. It's a 7-day transformation journey where you build live, guided by people who have done it before.</p>
+          </div>
+        </div>
+
+        <!-- Vision 2030 -->
+        <div class="mb-16">
+          <h3 class="text-3xl md:text-4xl font-bold heading-font mb-8 text-green-400">Vision 2030</h3>
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="glass-card p-6 text-center">
+              <div class="text-3xl font-bold text-orange-400 mb-2">1M</div>
+              <div class="text-gray-300">Africans equipped with no-code & AI skills</div>
+            </div>
+            <div class="glass-card p-6 text-center">
+              <div class="text-3xl font-bold text-green-400 mb-2">250K</div>
+              <div class="text-gray-300">New businesses launched</div>
+            </div>
+            <div class="glass-card p-6 text-center">
+              <div class="text-3xl font-bold text-blue-400 mb-2">500+</div>
+              <div class="text-gray-300">Corporates & governments connected</div>
+            </div>
+            <div class="glass-card p-6 text-center">
+              <div class="text-3xl font-bold text-purple-400 mb-2">Millions</div>
+              <div class="text-gray-300">New jobs & income opportunities</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Attend Section -->
+    <section id="why-attend" class="section-padding bg-black bg-opacity-20">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold heading-font mb-6">
+            <span class="gradient-text">Why Attend Uncoded Africa?</span>
+          </h2>
+          <div class="w-24 h-1 gradient-bg mx-auto mb-8"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="glass-card p-8">
+            <i class="fas fa-users text-4xl text-orange-400 mb-4"></i>
+            <h4 class="text-xl font-bold mb-4">All Participants</h4>
+            <ul class="text-gray-300 space-y-2">
+              <li>• Build and launch live projects in 7 days</li>
+              <li>• Access to 50+ no-code/AI tools and platforms</li>
+              <li>• Network with 6,000+ African builders</li>
+              <li>• Scholarships and data support available</li>
+            </ul>
+          </div>
+
+          <div class="glass-card p-8">
+            <i class="fas fa-crown text-4xl text-green-400 mb-4"></i>
+            <h4 class="text-xl font-bold mb-4">CEOs & Founders</h4>
+            <ul class="text-gray-300 space-y-2">
+              <li>• Meet next-generation African talent</li>
+              <li>• Discover innovation opportunities</li>
+              <li>• Access emerging markets insights</li>
+              <li>• Partner with ecosystem builders</li>
+            </ul>
+          </div>
+
+          <div class="glass-card p-8">
+            <i class="fas fa-graduation-cap text-4xl text-blue-400 mb-4"></i>
+            <h4 class="text-xl font-bold mb-4">Students & Job Seekers</h4>
+            <ul class="text-gray-300 space-y-2">
+              <li>• Build portfolio projects that get you hired</li>
+              <li>• Access to hiring hours and job opportunities</li>
+              <li>• Mentorship from industry leaders</li>
+              <li>• Practical skills for the digital economy</li>
+            </ul>
+          </div>
+
+          <div class="glass-card p-8">
+            <i class="fas fa-store text-4xl text-emerald-400 mb-4"></i>
+            <h4 class="text-xl font-bold mb-4">SMMEs & SMEs</h4>
+            <ul class="text-gray-300 space-y-2">
+              <li>• Digitize operations with no-code tools</li>
+              <li>• Scale faster without heavy technical overhead</li>
+              <li>• Access new markets and customers through digital adoption</li>
+            </ul>
+          </div>
+
+          <div class="glass-card p-8">
+            <i class="fas fa-fire text-4xl text-red-400 mb-4"></i>
+            <h4 class="text-xl font-bold mb-4">Non-Developers (The Ambitious & Hungry)</h4>
+            <ul class="text-gray-300 space-y-2">
+              <li>• Turn raw ideas into real apps and businesses without coding</li>
+              <li>• Build side hustles, startups, or community tools in one week</li>
+              <li>• Gain the courage and confidence to launch, even with no tech background</li>
+            </ul>
+          </div>
+
+          <div class="glass-card p-8">
+            <i class="fas fa-code text-4xl text-purple-400 mb-4"></i>
+            <h4 class="text-xl font-bold mb-4">Developers & Product Managers</h4>
+            <ul class="text-gray-300 space-y-2">
+              <li>• Accelerate development with no-code tools</li>
+              <li>• Build MVPs in hours, not months</li>
+              <li>• Integrate AI into existing workflows</li>
+              <li>• Scale teams without hiring constraints</li>
+            </ul>
+          </div>
+
+          <div class="glass-card p-8">
+            <i class="fas fa-chart-line text-4xl text-pink-400 mb-4"></i>
+            <h4 class="text-xl font-bold mb-4">Innovation Leaders</h4>
+            <ul class="text-gray-300 space-y-2">
+              <li>• Transform business operations</li>
+              <li>• Democratize innovation across teams</li>
+              <li>• Reduce development costs by 80%</li>
+              <li>• Future-proof digital strategies</li>
+            </ul>
+          </div>
+
+          <div class="glass-card p-8">
+            <i class="fas fa-search text-4xl text-cyan-400 mb-4"></i>
+            <h4 class="text-xl font-bold mb-4">Employers & Recruiters</h4>
+            <ul class="text-gray-300 space-y-2">
+              <li>• Access to skilled no-code talent pipeline</li>
+              <li>• Participate in structured hiring hours</li>
+              <li>• Meet candidates with proven projects</li>
+              <li>• Reduce recruitment costs and time</li>
+            </ul>
+          </div>
+
+          <div class="glass-card p-8">
+            <i class="fas fa-palette text-4xl text-yellow-400 mb-4"></i>
+            <h4 class="text-xl font-bold mb-4">Designers & Creatives</h4>
+            <ul class="text-gray-300 space-y-2">
+              <li>• Bring designs to life without coding</li>
+              <li>• Create interactive prototypes</li>
+              <li>• Build creative businesses and portfolios</li>
+              <li>• Collaborate with global creative community</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Program Section -->
+    <section id="program" class="section-padding">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold heading-font mb-6">
+            <span class="gradient-text">7-Day Transformation Journey</span>
+          </h2>
+          <div class="w-24 h-1 gradient-bg mx-auto mb-8"></div>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            From curiosity to creation — where every session ends with something live
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="glass-card p-6">
+            <div class="text-orange-400 text-2xl font-bold heading-font mb-3">Day 1–2 (Mon–Tue Mar 30–31)</div>
+            <h4 class="text-xl font-bold mb-4">Build Camp</h4>
+            <p class="text-gray-300 mb-4">Launch your first project by sunset. Master the ecosystem of no-code and AI-first tools: <strong>Webflow, Bubble, Glide, Softr, Airtable, Make, Zapier, Replit, Cursor, Lovable, Base44, Bolt, Gemini, and more emerging platforms.</strong></p>
+            <ul class="text-gray-300 text-sm mb-4 space-y-1">
+              <li>• Build your first live page</li>
+              <li>• Experience instant wins with hands-on guidance</li>
+            </ul>
+            <div class="text-sm text-orange-400">Ship something live • Get your first win</div>
+          </div>
+
+          <div class="glass-card p-6">
+            <div class="text-green-400 text-2xl font-bold heading-font mb-3">Day 3 (Wed Apr 1)</div>
+            <h4 class="text-xl font-bold mb-4">AI Helpers</h4>
+            <p class="text-gray-300 mb-4">AI for content, data, and smart agents. Use AI to write, organize, and automate.</p>
+            
+            <!-- Vibe Coding Workshop -->
+            <div class="border-t border-gray-600 pt-4 mt-4 mb-4">
+              <h5 class="text-lg font-bold text-yellow-400 mb-3">Vibe Coding Workshop (14:00–17:00)</h5>
+              <p class="text-gray-300 text-sm mb-3">Turn your idea into working software using AI-powered code generation. Speak or type in plain language.</p>
+            </div>
+            
+            <!-- Vibe Coding Party -->
+            <div class="border-t border-gray-600 pt-4 mt-4 mb-4">
+              <h5 class="text-lg font-bold text-purple-400 mb-3">Vibe Coding Party (19:00–22:00)</h5>
+              <p class="text-gray-300 text-sm mb-3">Live demos, music, and open mic showcases where AI builds on the big screen.</p>
+            </div>
+            
+            <div class="text-sm text-green-400">AI appears as helper, not hurdle</div>
+          </div>
+
+          <div class="glass-card p-6">
+            <div class="text-blue-400 text-2xl font-bold heading-font mb-3">Day 4 (Thu Apr 2)</div>
+            <h4 class="text-xl font-bold mb-4">Marketing & Sales</h4>
+            <p class="text-gray-300 mb-4">From idea to income — AI-driven growth strategies.</p>
+            <ul class="text-gray-300 text-sm mb-4 space-y-1">
+              <li>• <strong>AI Marketing:</strong> Automate content, email campaigns, social media, and ads</li>
+              <li>• <strong>Sales Automation:</strong> WhatsApp, SMS, and payment integration</li>
+              <li>• <strong>Go-to-Market in 24 Hours:</strong> Build funnels, test ads, launch live</li>
+              <li>• <strong>Pricing Mastery:</strong> Use AI to model, test, and optimize pricing</li>
+            </ul>
+          </div>
+
+          <div class="glass-card p-6">
+            <div class="text-purple-400 text-2xl font-bold heading-font mb-3">Day 5 (Fri Apr 3)</div>
+            <h4 class="text-xl font-bold mb-4">Growth & Scaling</h4>
+            <p class="text-gray-300 mb-4">Learn how to scale what you've built.</p>
+            <ul class="text-gray-300 text-sm mb-4 space-y-1">
+              <li>• <strong>Investor Readiness:</strong> Pitch with AI-powered storytelling and decks</li>
+              <li>• <strong>Analytics & Growth Loops:</strong> Use AI dashboards to track KPIs</li>
+              <li>• <strong>Collaboration Tools:</strong> Integrate with Slack, Notion, Trello, and more</li>
+              <li>• <strong>Funding Pathways:</strong> Meet VCs, angels, and ecosystem funders</li>
+            </ul>
+          </div>
+
+          <div class="glass-card p-6">
+            <div class="text-pink-400 text-2xl font-bold heading-font mb-3">Day 6 (Sat Apr 4)</div>
+            <h4 class="text-xl font-bold mb-4">Impact & Ecosystem</h4>
+            <p class="text-gray-300 mb-4">Build for Africa, build for good.</p>
+            <ul class="text-gray-300 text-sm mb-4 space-y-1">
+              <li>• <strong>SMME & SME Focus:</strong> Tools for small businesses to digitize fast</li>
+              <li>• <strong>Sector Use Cases:</strong> Health, agriculture, logistics, education</li>
+              <li>• <strong>Innovation for Good:</strong> Climate, resilience, and inclusion</li>
+              <li>• <strong>Ambitious & Hungry Builders:</strong> Space for non-developers to turn grit into growth</li>
+            </ul>
+          </div>
+
+          <div class="glass-card p-6">
+            <div class="text-yellow-400 text-2xl font-bold heading-font mb-3">Day 7 (Sun Apr 5)</div>
+            <h4 class="text-xl font-bold mb-4">Demo Day & Awards</h4>
+            <p class="text-gray-300 mb-4">Showcase and celebrate.</p>
+            <ul class="text-gray-300 text-sm mb-4 space-y-1">
+              <li>• <strong>Demo Day:</strong> Live pitches and product showcases to investors, corporates, and peers</li>
+              <li>• <strong>Uncoded Africa Awards:</strong> Celebrate innovators in <strong>16+ categories</strong></li>
+              <li>• <strong>Networking Gala:</strong> Connect with builders, sponsors, and global ecosystem leaders</li>
+            </ul>
+            <div class="text-sm text-yellow-400">Leave with a live product, a network, and a new identity as a builder</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Challenges Section -->
+    <section id="challenges" class="section-padding bg-black bg-opacity-30">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold heading-font mb-6">
+            <span class="gradient-text">Challenges & Competitions</span>
+          </h2>
+          <div class="w-24 h-1 gradient-bg mx-auto mb-8"></div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="glass-card p-8 text-center">
+            <i class="fas fa-gamepad text-5xl text-orange-400 mb-6"></i>
+            <h3 class="text-2xl font-bold mb-4">Uncoders Games</h3>
+            <p class="text-gray-300 mb-6">Fun, competitive skill-building challenges. Test your no-code abilities in gamified format.</p>
+            <div class="text-orange-400 font-bold">Prizes • Recognition • Fun</div>
+          </div>
+
+          <div class="glass-card p-8 text-center">
+            <i class="fas fa-lightbulb text-5xl text-green-400 mb-6"></i>
+            <h3 class="text-2xl font-bold mb-4">Impact Hackathon</h3>
+            <p class="text-gray-300 mb-6">24-hour hackathon where teams solve real African challenges using no-code tools.</p>
+            <div class="text-green-400 font-bold">Real problems • Live solutions</div>
+          </div>
+
+          <div class="glass-card p-8 text-center">
+            <i class="fas fa-rocket text-5xl text-blue-400 mb-6"></i>
+            <h3 class="text-2xl font-bold mb-4">Startup Pitch</h3>
+            <p class="text-gray-300 mb-6">Founders pitch live projects to investors and ecosystem leaders for real funding.</p>
+            <div class="text-blue-400 font-bold">Live pitches • Real investment</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Networking Section -->
+    <section id="networking" class="section-padding">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold heading-font mb-6">
+            <span class="gradient-text">Networking & Connections</span>
+          </h2>
+          <div class="w-24 h-1 gradient-bg mx-auto mb-8"></div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="glass-card p-8">
+            <i class="fas fa-building text-4xl text-blue-400 mb-4"></i>
+            <h3 class="text-xl font-bold mb-4">Meet & Match Enterprises</h3>
+            <p class="text-gray-300 mb-4">Structured networking with corporates looking for innovation partners and talent.</p>
+            <ul class="text-sm text-gray-400 space-y-1">
+              <li>• Corporate innovation challenges</li>
+              <li>• Partnership opportunities</li>
+              <li>• Talent recruitment</li>
+            </ul>
+          </div>
+
+          <div class="glass-card p-8">
+            <i class="fas fa-store text-4xl text-green-400 mb-4"></i>
+            <h3 class="text-xl font-bold mb-4">Meet & Match SMEs</h3>
+            <p class="text-gray-300 mb-4">Connect with small and medium enterprises seeking digital transformation solutions.</p>
+            <ul class="text-sm text-gray-400 space-y-1">
+              <li>• Automation opportunities</li>
+              <li>• Digital transformation</li>
+              <li>• Freelance projects</li>
+            </ul>
+          </div>
+
+          <div class="glass-card p-8">
+            <i class="fas fa-users text-4xl text-orange-400 mb-4"></i>
+            <h3 class="text-xl font-bold mb-4">Founders Gathering</h3>
+            <p class="text-gray-300 mb-4">Intimate sessions for builders to connect with peers, mentors, and ecosystem leaders.</p>
+            <ul class="text-sm text-gray-400 space-y-1">
+              <li>• Peer-to-peer learning</li>
+              <li>• Mentorship matching</li>
+              <li>• Collaboration opportunities</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section id="awards" class="section-padding bg-black bg-opacity-20">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold heading-font mb-6">
+            <span class="gradient-text">Awards & Recognition</span>
+          </h2>
+          <div class="w-24 h-1 gradient-bg mx-auto mb-8"></div>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            16 categories designed to incentivize innovation in Africa's most critical sectors
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="glass-card p-6 text-center">
+            <i class="fas fa-trophy text-4xl text-yellow-400 mb-4"></i>
+            <h4 class="text-lg font-bold mb-2">The Spark Award</h4>
+            <p class="text-gray-300 text-sm">Best First Creation</p>
+          </div>
+
+          <div class="glass-card p-6 text-center">
+            <i class="fas fa-heartbeat text-4xl text-red-400 mb-4"></i>
+            <h4 class="text-lg font-bold mb-2">Health-Tech</h4>
+            <p class="text-gray-300 text-sm">Healthcare Innovation</p>
+          </div>
+
+          <div class="glass-card p-6 text-center">
+            <i class="fas fa-graduation-cap text-4xl text-blue-400 mb-4"></i>
+            <h4 class="text-lg font-bold mb-2">Edu-Tech</h4>
+            <p class="text-gray-300 text-sm">Skills Development</p>
+          </div>
+
+          <div class="glass-card p-6 text-center">
+            <i class="fas fa-seedling text-4xl text-green-400 mb-4"></i>
+            <h4 class="text-lg font-bold mb-2">Agri-Tech</h4>
+            <p class="text-gray-300 text-sm">Food Security</p>
+          </div>
+
+          <div class="glass-card p-6 text-center">
+            <i class="fas fa-leaf text-4xl text-emerald-400 mb-4"></i>
+            <h4 class="text-lg font-bold mb-2">Climate Shield</h4>
+            <p class="text-gray-300 text-sm">Climate Resilience</p>
+          </div>
+
+          <div class="glass-card p-6 text-center">
+            <i class="fas fa-shield-alt text-4xl text-indigo-400 mb-4"></i>
+            <h4 class="text-lg font-bold mb-2">Safe Community</h4>
+            <p class="text-gray-300 text-sm">Public Safety</p>
+          </div>
+
+          <div class="glass-card p-6 text-center">
+            <i class="fas fa-map-marked-alt text-4xl text-purple-400 mb-4"></i>
+            <h4 class="text-lg font-bold mb-2">Tourism</h4>
+            <p class="text-gray-300 text-sm">Local Tourism</p>
+          </div>
+
+          <div class="glass-card p-6 text-center">
+            <i class="fas fa-crown text-4xl text-yellow-500 mb-4"></i>
+            <h4 class="text-lg font-bold mb-2">Grand Prize</h4>
+            <p class="text-gray-300 text-sm">Uncoded Entrepreneur</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Get Involved Section -->
+    <section id="get-involved" class="section-padding bg-black bg-opacity-30">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold heading-font mb-6">
+            <span class="gradient-text">Get Involved</span>
+          </h2>
+          <div class="w-24 h-1 gradient-bg mx-auto mb-8"></div>
+          <p class="text-xl text-gray-300">
+            Multiple ways to be part of Africa's no-code revolution
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="glass-card p-8 text-center">
+            <i class="fas fa-ticket-alt text-4xl text-blue-400 mb-4"></i>
+            <h3 class="text-xl font-bold mb-4">Get Your Ticket</h3>
+            <p class="text-gray-300 mb-6">Join 1,000 in person and 5,000 virtual participants across Africa.</p>
+            <a href="/tickets" onclick="navigate('/tickets')" class="btn-primary">Buy Ticket</a>
+          </div>
+
+          <div class="glass-card p-8 text-center">
+            <i class="fas fa-handshake text-4xl text-orange-400 mb-4"></i>
+            <h3 class="text-xl font-bold mb-4">Sponsor Us</h3>
+            <p class="text-gray-300 mb-6">Align your brand with Africa's next wave of builders and innovators.</p>
+            <a href="/sponsor" onclick="navigate('/sponsor')" class="btn-primary">Sponsor Partnership</a>
+          </div>
+
+          <div class="glass-card p-8 text-center">
+            <i class="fas fa-microphone text-4xl text-green-400 mb-4"></i>
+            <h3 class="text-xl font-bold mb-4">Speak</h3>
+            <p class="text-gray-300 mb-6">Share your expertise with 6,000+ participants across Africa.</p>
+            <a href="/speak" onclick="navigate('/speak')" class="btn-secondary">Apply to Speak</a>
+          </div>
+
+          <div class="glass-card p-8 text-center">
+            <i class="fas fa-hands-helping text-4xl text-blue-400 mb-4"></i>
+            <h3 class="text-xl font-bold mb-4">Volunteer</h3>
+            <p class="text-gray-300 mb-6">Help make this transformation possible on the ground in Johannesburg.</p>
+            <a href="/volunteer" onclick="navigate('/volunteer')" class="btn-secondary">Volunteer</a>
+          </div>
+
+          <div class="glass-card p-8 text-center">
+            <i class="fas fa-bullhorn text-4xl text-purple-400 mb-4"></i>
+            <h3 class="text-xl font-bold mb-4">Ambassador</h3>
+            <p class="text-gray-300 mb-6">Bring the Uncoded Africa movement to your community, university, or city.</p>
+            <a href="/ambassador" onclick="navigate('/ambassador')" class="btn-secondary">Be Ambassador</a>
+          </div>
+
+          <div class="glass-card p-8 text-center">
+            <i class="fas fa-newspaper text-4xl text-pink-400 mb-4"></i>
+            <h3 class="text-xl font-bold mb-4">Press</h3>
+            <p class="text-gray-300 mb-6">Cover Africa's premier no-code summit and digital transformation story.</p>
+            <a href="/press" onclick="navigate('/press')" class="btn-secondary">Press Accreditation</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section-padding">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold heading-font mb-6">
+          <span class="gradient-text">Connect With Us</span>
+        </h2>
+        <div class="w-24 h-1 gradient-bg mx-auto mb-8"></div>
+        
+        <div class="grid md:grid-cols-3 gap-8 mb-12">
+          <div>
+            <i class="fas fa-envelope text-4xl icon-gradient mb-4"></i>
+            <h4 class="text-xl font-bold mb-3 heading-font">General Inquiries</h4>
+            <a href="mailto:hello@uncodedafrica.org" class="text-gray-300 hover:text-yellow-400 transition-colors">
+              hello@uncodedafrica.org
+            </a>
+          </div>
+
+          <div>
+            <i class="fas fa-phone text-4xl icon-gradient mb-4"></i>
+            <h4 class="text-xl font-bold mb-3 heading-font">Call or WhatsApp</h4>
+            <div class="space-y-3">
+              <a href="tel:+27663365296" class="block text-gray-300 hover:text-yellow-400 transition-colors font-medium">
+                +27 66 336 5296
+              </a>
+              <a href="https://wa.me/27663365296" target="_blank" class="inline-flex items-center bg-green-600 hover:bg-green-500 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+                <i class="fab fa-whatsapp mr-2"></i>Open WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <i class="fas fa-map-marker-alt text-4xl icon-gradient mb-4"></i>
+            <h4 class="text-xl font-bold mb-3 heading-font">Location</h4>
+            <p class="text-gray-300">
+              Johannesburg<br>South Africa
+            </p>
+          </div>
+        </div>
+
+        <div class="flex justify-center space-x-6">
+          <a href="#" class="text-2xl text-gray-400 hover:text-orange-400 transition-colors">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="text-2xl text-gray-400 hover:text-orange-400 transition-colors">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="#" class="text-2xl text-gray-400 hover:text-orange-400 transition-colors">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="#" class="text-2xl text-gray-400 hover:text-orange-400 transition-colors">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- TICKETS PAGE -->
+  <div id="tickets-page" class="page-content">
+    <section class="section-padding pt-24">
+      <div class="max-w-4xl mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl md:text-5xl font-bold heading-font mb-6">
+            <span class="gradient-text">Get Your Ticket</span>
+          </h2>
+          <div class="w-24 h-1 gradient-bg mx-auto mb-8"></div>
+        </div>
+
+        <div class="glass-card p-8 md:p-12">
+          <div class="form-note">
+            <i class="fas fa-info-circle mr-2"></i>
+            Temporary form endpoint. Swap with production Formspree ID.
+          </div>
+          
+          <form id="tickets-form" class="grid md:grid-cols-2 gap-6" action="https://formspree.io/f/tickets123" method="POST">
+            <!-- Hidden fields -->
+            <input type="hidden" name="project" value="Uncoded Africa 2026">
+            <input type="hidden" name="env" value="staging">
+            <input type="text" name="website" class="honeypot">
+            
+            <div>
+              <label class="block text-sm font-medium mb-2">Full Name *</label>
+              <input type="text" class="form-input" name="fullName" required>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium mb-2">Email *</label>
+              <input type="email" class="form-input" name="email" required>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium mb-2">Phone</label>
+              <input type="tel" class="form-input" name="phone">
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium mb-2">Country *</label>
+              <select class="form-select" name="country" required>
+                <option value="">Select your country</option>
+                <option value="ZA">South Africa</option>
+                <option value="NG">Nigeria</option>
+                <option value="KE">Kenya</option>
+                <option value="GH">Ghana</option>
+                <option value="EG">Egypt</option>
+                <option value="ET">Ethiopia</option>
+                <option value="TZ">Tanzania</option>
+                <option value="UG">Uganda</option>
+                <option value="RW">Rwanda</option>
+                <option value="ZW">Zimbabwe</option>
+                <option value="BW">Botswana</option>
+                <option value="ZM">Zambia</option>
+                <option value="other_africa">Other African Country</option>
+                <option value="international">International</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium mb-2">I want *</label>
+              <select class="form-select" name="attendance_type" required>
+                <option value="">Select preference</option>
+                <option value="in_person">In person</option>
+                <option value="virtual">Virtual</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium mb-2">Organization or school</label>
+              <input type="text" class="form-input" name="organization">
+            </div>
+
+            <div class="md:col-span-2">
+              <label class="block text-sm font-medium mb-2">Role *</label>
+              <select class="form-select" name="role" required>
+                <option value="">Select role</option>
+                <option value="student">Student</option>
+                <option value="job_seeker">Job seeker</option>
+                <option value="founder">Founder</option>
+                <option value="employee">Employee</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="md:col-span-2">
+              <label class="flex items-center mb-4">
+                <input type="checkbox" name="consent" class="mr-3" required>
+                <span class="text-sm">I consent to receive updates about Uncoded Africa and understand I can unsubscribe anytime. *</span>
+              </label>
+            </div>
+
+            <div class="md:col-span-2">
+              <div id="tickets-success" class="success-message">
+                Thanks. You will be first to know when tickets open.
+              </div>
+              <div id="tickets-error" class="error-message">
+                Please check the required fields.
+              </div>
+              <button type="submit" class="btn-primary w-full text-lg py-4">
+                Submit Ambassador Application
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- PRESS PAGE -->
+  <div id="press-page" class="page-content">
+    <section class="section-padding pt-24">
+      <div class="max-w-4xl mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl md:text-5xl font-bold heading-font mb-6">
+            <span class="gradient-text">Press Accreditation</span>
+          </h2>
+          <div class="w-24 h-1 gradient-bg mx-auto mb-8"></div>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            Cover Africa's digital transformation story. Press access includes full event coverage, exclusive interviews, and media resources.
+          </p>
+        </div>
+
+        <div class="glass-card p-8 md:p-12">
+          <div class="form-note">
+            <i class="fas fa-info-circle mr-2"></i>
+            Temporary form endpoint. Swap with production Formspree ID.
+          </div>
+          
+          <form id="press-form" class="grid md:grid-cols-2 gap-6" action="https://formspree.io/f/press123" method="POST">
+            <!-- Hidden fields -->
+            <input type="hidden" name="project" value="Uncoded Africa 2026">
+            <input type="hidden" name="env" value="staging">
+            <input type="text" name="website" class="honeypot">
+            
+            <div>
+              <label class="block text-sm font-medium mb-2">Full Name *</label>
+              <input type="text" class="form-input" name="fullName" required>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium mb-2">Email *</label>
+              <input type="email" class="form-input" name="email" required>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium mb-2">Phone</label>
+              <input type="tel" class="form-input" name="phone">
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium mb-2">Media Organization *</label>
+              <input type="text" class="form-input" name="organization" required>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium mb-2">Role *</label>
+              <select class="form-select" name="role" required>
+                <option value="">Select role</option>
+                <option value="journalist">Journalist</option>
+                <option value="editor">Editor</option>
+                <option value="photographer">Photographer</option>
+                <option value="videographer">Videographer</option>
+                <option value="blogger">Blogger</option>
+                <option value="podcaster">Podcaster</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium mb-2">Country *</label>
+              <select class="form-select" name="country" required>
+                <option value="">Select country</option>
+                <option value="ZA">South Africa</option>
+                <option value="NG">Nigeria</option>
+                <option value="KE">Kenya</option>
+                <option value="GH">Ghana</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="md:col-span-2">
+              <label class="block text-sm font-medium mb-2">Media Organization Website *</label>
+              <input type="url" class="form-input" name="org_website" placeholder="https://example.com" required>
+            </div>
+
+            <div class="md:col-span-2">
+              <label class="block text-sm font-medium mb-2">Coverage Interest</label>
+              <div class="checkbox-group">
+                <div class="checkbox-item">
+                  <input type="checkbox" name="coverage" value="keynote">
+                  <span>Keynote sessions</span>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" name="coverage" value="awards">
+                  <span>Awards ceremony</span>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" name="coverage" value="interviews">
+                  <span>Speaker interviews</span>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" name="coverage" value="workshops">
+                  <span>Workshop coverage</span>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" name="coverage" value="community">
+                  <span>Community stories</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="md:col-span-2">
+              <label class="block text-sm font-medium mb-2">Story Angle</label>
+              <textarea class="form-textarea" name="story_angle" placeholder="What story do you want to tell about Uncoded Africa?"></textarea>
+            </div>
+
+            <div class="md:col-span-2">
+              <label class="flex items-center mb-4">
+                <input type="checkbox" name="consent" class="mr-3" required>
+                <span class="text-sm">I consent to receive press information and understand I can unsubscribe anytime. *</span>
+              </label>
+            </div>
+
+            <div class="md:col-span-2">
+              <div id="press-success" class="success-message">
+                Thank you. Media team will contact you within 72 hours.
+              </div>
+              <div id="press-error" class="error-message">
+                Please check the required fields.
+              </div>
+              <button type="submit" class="btn-primary w-full text-lg py-4">
+                Submit Application
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- HELP/CONTACT PAGE -->
+  <div id="help-contact-page" class="page-content">
+    <section class="section-padding pt-24">
+      <div class="max-w-4xl mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl md:text-5xl font-bold heading-font mb-6">
+            <span class="gradient-text">Contact Us</span>
+          </h2>
+          <div class="w-24 h-1 gradient-bg mx-auto mb-8"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 mb-16">
+          <div>
+            <h3 class="text-2xl font-bold mb-6 text-orange-400">Get In Touch</h3>
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <i class="fas fa-envelope text-2xl text-yellow-400 mr-4 mt-1"></i>
+                <div>
+                  <h4 class="font-semibold mb-1">General Inquiries</h4>
+                  <a href="mailto:hello@uncodedafrica.org" class="text-gray-300 hover:text-yellow-400">hello@uncodedafrica.org</a>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <i class="fas fa-phone text-2xl text-green-400 mr-4 mt-1"></i>
+                <div>
+                  <h4 class="font-semibold mb-1">Call or WhatsApp</h4>
+                  <a href="tel:+27663365296" class="text-gray-300 hover:text-yellow-400 block">+27 66 336 5296</a>
+                  <a href="https://wa.me/27663365296" target="_blank" class="inline-flex items-center bg-green-600 hover:bg-green-500 text-white px-3 py-1 rounded text-sm mt-2 transition-colors">
+                    <i class="fab fa-whatsapp mr-2"></i>WhatsApp
+                  </a>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <i class="fas fa-map-marker-alt text-2xl text-blue-400 mr-4 mt-1"></i>
+                <div>
+                  <h4 class="font-semibold mb-1">Location</h4>
+                  <p class="text-gray-300">Johannesburg, South Africa</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-2xl font-bold mb-6 text-green-400">Send a Message</h3>
+            <form id="contact-form" class="space-y-6" action="https://formspree.io/f/contact123" method="POST">
+              <input type="hidden" name="project" value="Uncoded Africa 2026">
+              <input type="hidden" name="env" value="staging">
+              <input type="text" name="website" class="honeypot">
+              
+              <div>
+                <label class="block text-sm font-medium mb-2">Name *</label>
+                <input type="text" class="form-input" name="name" required>
+              </div>
+              
+              <div>
+                <label class="block text-sm font-medium mb-2">Email *</label>
+                <input type="email" class="form-input" name="email" required>
+              </div>
+              
+              <div>
+                <label class="block text-sm font-medium mb-2">Subject *</label>
+                <select class="form-select" name="subject" required>
+                  <option value="">Select subject</option>
+                  <option value="general">General inquiry</option>
+                  <option value="tickets">Tickets</option>
+                  <option value="sponsorship">Sponsorship</option>
+                  <option value="speaking">Speaking</option>
+                  <option value="volunteering">Volunteering</option>
+                  <option value="press">Press</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              
+              <div>
+                <label class="block text-sm font-medium mb-2">Message *</label>
+                <textarea class="form-textarea" name="message" required></textarea>
+              </div>
+              
+              <div id="contact-success" class="success-message">
+                Thank you. We will reply within 48 hours.
+              </div>
+              <div id="contact-error" class="error-message">
+                Please check the required fields.
+              </div>
+              <button type="submit" class="btn-primary w-full">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- HELP/FAQs PAGE -->
+  <div id="help-faqs-page" class="page-content">
+    <section class="section-padding pt-24">
+      <div class="max-w-4xl mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl md:text-5xl font-bold heading-font mb-6">
+            <span class="gradient-text">Frequently Asked Questions</span>
+          </h2>
+          <div class="w-24 h-1 gradient-bg mx-auto mb-8"></div>
+        </div>
+
+        <div class="space-y-4">
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)">
+              <span>What is Uncoded Africa?</span>
+              <i class="fas fa-chevron-down accordion-icon"></i>
+            </button>
+            <div class="accordion-content">
+              <p>Uncoded Africa is a 7-day transformation journey focused on no-code, low-code, and AI tools. It's not a traditional conference but a hands-on experience where you build live projects guided by experienced mentors.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)">
+              <span>When and where is the event?</span>
+              <i class="fas fa-chevron-down accordion-icon"></i>
+            </button>
+            <div class="accordion-content">
+              <p>March 30 - April 5, 2026 in Johannesburg, South Africa. We welcome 1,000 in-person participants and 5,000 virtual participants across Africa.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)">
+              <span>Do I need coding experience?</span>
+              <i class="fas fa-chevron-down accordion-icon"></i>
+            </button>
+            <div class="accordion-content">
+              <p>No! Uncoded Africa is specifically designed for non-developers. We welcome students, job seekers, founders, and anyone ambitious enough to build without traditional coding skills.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)">
+              <span>What will I learn?</span>
+              <i class="fas fa-chevron-down accordion-icon"></i>
+            </button>
+            <div class="accordion-content">
+              <p>You'll master no-code tools like Webflow, Bubble, Airtable, and AI platforms. You'll build marketing funnels, create apps, automate workflows, and pitch to real investors by the end of the week.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)">
+              <span>How much do tickets cost?</span>
+              <i class="fas fa-chevron-down accordion-icon"></i>
+            </button>
+            <div class="accordion-content">
+              <p>Ticket pricing will be announced soon. We're committed to making this accessible with scholarships, student discounts, and data support for virtual participants.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)">
+              <span>Can I attend virtually?</span>
+              <i class="fas fa-chevron-down accordion-icon"></i>
+            </button>
+            <div class="accordion-content">
+              <p>Yes! Virtual participants get full access to workshops, mentorship, networking, and can participate in all challenges and competitions.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header" onclick="toggleAccordion(this)">
+              <span>What's included in my ticket?</span>
+              <i class="fas fa-chevron-down accordion-icon"></i>
+            </button>
+            <div class="accordion-content">
+              <p>Full access to all 7 days, workshop materials, mentorship, networking events, access to 50+ no-code tools, certificate of completion, and lifetime access to the alumni community.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- HELP/VISA SUPPORT PAGE -->
+  <div id="help-visa-support-page" class="page-content">
+    <section class="section-padding pt-24">
+      <div class="max-w-4xl mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl md:text-5xl font-bold heading-font mb-6">
+            <span class="gradient-text">Visa Support</span>
+          </h2>
+          <div class="w-24 h-1 gradient-bg mx-auto mb-8"></div>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            We provide visa support letters for international attendees traveling to South Africa.
+          </p>
+        </div>
+
+        <div class="glass-card p-8 md:p-12">
+          <div class="mb-8">
+            <h3 class="text-2xl font-bold mb-4 text-orange-400">What We Provide</h3>
+            <ul class="text-gray-300 space-y-2">
+              <li>• Official invitation letter for visa applications</li>
+              <li>• Event confirmation and agenda</li>
+              <li>• Accommodation recommendations</li>
+              <li>• Local contact information</li>
+              <li>• Support throughout the visa process</li>
+            </ul>
+          </div>
+
+          <div class="form-note">
+            <i class="fas fa-info-circle mr-2"></i>
+            Temporary form endpoint. Swap with production Formspree ID.
+          </div>
+          
+          <form id="visa-form" class="grid md:grid-cols-2 gap-6" action="https://formspree.io/f/visa123" method="POST">
+            <input type="hidden" name="project" value="Uncoded Africa 2026">
+            <input type="hidden" name="env" value="staging">
+            <input type="text" name="website" class="honeypot">
+            
+            <div>
+              <label class="block text-sm font-medium mb-2">Full Name *</label>
+              <input type="text" class="form-input" name="fullName" required>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium mb-2">Email *</label>
+              <input type="email" class="form-input" name="email" required>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium mb-2">Passport Country *</label>
+              <input type="text" class="form-input" name="passport_country" required>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium mb-2">Current Residence *</label>
+              <input type="text" class="form-input" name="residence" required>
+            </div>
+
+            <div class="md:col-span-2">
+              <label class="block text-sm font-medium mb-2">Passport Number *</label>
+              <input type="text" class="form-input" name="passport_number" required>
+            </div>
+
+            <div class="md:col-span-2">
+              <label class="block text-sm font-medium mb-2">Purpose of Visit</label>
+              <textarea class="form-textarea" name="purpose" placeholder="Attending Uncoded Africa 2026 - Africa's Premier No-Code Summit"></textarea>
+            </div>
+
+            <div class="md:col-span-2">
+              <div id="visa-success" class="success-message">
+                Thank you. We will send your visa support documents within 7 days.
+              </div>
+              <div id="visa-error" class="error-message">
+                Please check the required fields.
+              </div>
+              <button type="submit" class="btn-primary w-full text-lg py-4">
+                Request Visa Support
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- HELP/VISA SUPPORT PAGE -->
+  <div id="help-visa-support-page" class="page-content">
+    <section class="section-padding pt-24">
+      <div class="max-w-4xl mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl md:text-5xl font-bold heading-font mb-6">
+            <span class="gradient-text">Visa Support</span>
+          </h2>
+          <div class="w-24 h-1 gradient-bg mx-auto mb-8"></div>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            We provide visa support letters for international attendees traveling to South Africa.
+          </p>
+        </div>
+
+        <div class="glass-card p-8 md:p-12">
+          <div class="mb-8">
+            <h3 class="text-2xl font-bold mb-4 text-orange-400">What We Provide</h3>
+            <ul class="text-gray-300 space-y-2">
+              <li>• Official invitation letter for visa applications</li>
+              <li>• Event confirmation and agenda</li>
+              <li>• Accommodation recommendations</li>
+              <li>• Local contact information</li>
+              <li>• Support throughout the visa process</li>
+            </ul>
+          </div>
+
+          <div class="form-note">
+            <i class="fas fa-info-circle mr-2"></i>
+            Temporary form endpoint. Swap with production Formspree ID.
+          </div>
+          
+          <form id="visa-form" class="grid md:grid-cols-2 gap-6" action="https://formspree.io/f/visa123" method="POST">
+            <input type="hidden" name="project" value="Uncoded Africa 2026">
+            <input type="hidden" name="env" value="staging">
+            <input type="text" name="website" class="honeypot">
+            
+            <div>
+              <label class="block text-sm font-medium mb-2">Full Name *</label>
+              <input type="text" class="form-input" name="fullName" required>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium mb-2">Email *</label>
+              <input type="email" class="form-input" name="email" required>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium mb-2">Passport Country *</label>
+              <input type="text" class="form-input" name="passport_country" required>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium mb-2">Current Residence *</label>
+              <input type="text" class="form-input" name="residence" required>
+            </div>
+
+            <div class="md:col-span-2">
+              <label class="block text-sm font-medium mb-2">Passport Number *</label>
+              <input type="text" class="form-input" name="passport_number" required>
+            </div>
+
+            <div class="md:col-span-2">
+              <label class="block text-sm font-medium mb-2">Purpose of Visit</label>
+              <textarea class="form-textarea" name="purpose" placeholder="Attending Uncoded Africa 2026 - Africa's Premier No-Code Summit"></textarea>
+            </div>
+
+            <div class="md:col-span-2">
+              <div id="visa-success" class="success-message">
+                Thank you. We will send your visa support documents within 7 days.
+              </div>
+              <div id="visa-error" class="error-message">
+                Please check the required fields and try again.
+              </div>
+              <button type="submit" class="btn-primary w-full text-lg py-4">
+                Request Visa Support
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- RESOURCES PAGES -->
+  <div id="resources-tools-page" class="page-content">
+    <section class="section-padding pt-24">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl md:text-5xl font-bold heading-font mb-6">
+            <span class="gradient-text">Tools Landscape</span>
+          </h2>
+          <div class="w-24 h-1 gradient-bg mx-auto mb-8"></div>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            Comprehensive guide to the no-code and AI tools ecosystem shaping Africa's digital future.
+          </p>
+        </div>
+        <div class="glass-card p-8 text-center">
+          <h3 class="text-2xl font-bold mb-4 text-orange-400">Coming Soon</h3>
+          <p class="text-gray-300 mb-6">We're building a comprehensive resource on the no-code tools landscape. Stay tuned!</p>
+          <a href="/tickets" onclick="navigate('/tickets')" class="btn-primary">Get Your Ticket</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div id="resources-future-work-page" class="page-content">
+    <section class="section-padding pt-24">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl md:text-5xl font-bold heading-font mb-6">
+            <span class="gradient-text">Future of Work & Jobs</span>
+          </h2>
+          <div class="w-24 h-1 gradient-bg mx-auto mb-8"></div>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            How no-code and AI are transforming careers and creating new opportunities across Africa.
+          </p>
+        </div>
+        <div class="glass-card p-8 text-center">
+          <h3 class="text-2xl font-bold mb-4 text-green-400">Coming Soon</h3>
+          <p class="text-gray-300 mb-6">Deep insights on the future of work in the no-code economy. Resources launching soon!</p>
+          <a href="/tickets" onclick="navigate('/tickets')" class="btn-primary">Get Your Ticket</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div id="resources-climate-page" class="page-content">
+    <section class="section-padding pt-24">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl md:text-5xl font-bold heading-font mb-6">
+            <span class="gradient-text">Climate & Resilience</span>
+          </h2>
+          <div class="w-24 h-1 gradient-bg mx-auto mb-8"></div>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            Building climate solutions and resilience across Africa using no-code tools.
+          </p>
+        </div>
+        <div class="glass-card p-8 text-center">
+          <h3 class="text-2xl font-bold mb-4 text-blue-400">Coming Soon</h3>
+          <p class="text-gray-300 mb-6">Resources on climate innovation and resilience building. Content launching soon!</p>
+          <a href="/tickets" onclick="navigate('/tickets')" class="btn-primary">Get Your Ticket</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div id="resources-diversity-page" class="page-content">
+    <section class="section-padding pt-24">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl md:text-5xl font-bold heading-font mb-6">
+            <span class="gradient-text">Diversity & Inclusion</span>
+          </h2>
+          <div class="w-24 h-1 gradient-bg mx-auto mb-8"></div>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            Democratizing technology access and fostering inclusive innovation across Africa.
+          </p>
+        </div>
+        <div class="glass-card p-8 text-center">
+          <h3 class="text-2xl font-bold mb-4 text-purple-400">Coming Soon</h3>
+          <p class="text-gray-300 mb-6">Resources on building inclusive and diverse tech ecosystems. Coming soon!</p>
+          <a href="/tickets" onclick="navigate('/tickets')" class="btn-primary">Get Your Ticket</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div id="resources-for-good-page" class="page-content">
+    <section class="section-padding pt-24">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl md:text-5xl font-bold heading-font mb-6">
+            <span class="gradient-text">Innovation for Good</span>
+          </h2>
+          <div class="w-24 h-1 gradient-bg mx-auto mb-8"></div>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            Using technology to solve Africa's most pressing social and economic challenges.
+          </p>
+        </div>
+        <div class="glass-card p-8 text-center">
+          <h3 class="text-2xl font-bold mb-4 text-pink-400">Coming Soon</h3>
+          <p class="text-gray-300 mb-6">Resources on leveraging technology for social impact. Content launching soon!</p>
+          <a href="/tickets" onclick="navigate('/tickets')" class="btn-primary">Get Your Ticket</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- GLOBAL FOOTER -->
+  <footer class="ua-footer bg-[#0e1b2a] text-[#d7deea] mt-16">
+    <div class="mx-auto max-w-7xl px-6 py-12 grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+      <!-- Brand -->
+      <section aria-label="About Uncoded Africa">
+        <a href="/" onclick="navigate('/')" class="inline-flex items-center">
+          <svg class="h-9" viewBox="0 0 320 80" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="footerLogoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#FFD700"/>
+                <stop offset="50%" style="stop-color:#4CAF50"/>
+                <stop offset="100%" style="stop-color:#00BCD4"/>
+              </linearGradient>
+            </defs>
+            <path d="M8 12 L8 45 Q8 58 18 58 Q28 58 28 45 L28 12" 
+                  stroke="url(#footerLogoGradient)" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <circle cx="18" cy="12" r="3" fill="url(#footerLogoGradient)"/>
+            <path d="M38 58 L48 12 L58 58" 
+                  stroke="url(#footerLogoGradient)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M43 40 L53 40" 
+                  stroke="url(#footerLogoGradient)" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <circle cx="48" cy="12" r="3" fill="url(#footerLogoGradient)"/>
+            <text x="70" y="35" font-family="Poppins, sans-serif" font-weight="700" font-size="20" fill="#FF9D00">UNCODED</text>
+            <text x="85" y="55" font-family="Poppins, sans-serif" font-weight="700" font-size="20" fill="#FFFFFF">AFRICA</text>
+          </svg>
+        </a>
+        <p class="mt-3 text-sm text-[#b9c5d6]">
+          Africa's premier no-code summit empowering millions to create, launch, and earn.
+        </p>
+        <small class="block mt-2 text-xs text-[#93a3b8]">Powered by Setup A Startup</small>
+      </section>
+
+      <!-- Get Involved -->
+      <nav aria-label="Get Involved">
+        <h4 class="text-white font-semibold mb-3">Get Involved</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/tickets" onclick="navigate('/tickets')" class="hover:opacity-80">Buy Your Ticket</a></li>
+          <li><a href="/sponsor" onclick="navigate('/sponsor')" class="hover:opacity-80">Sponsor Us</a></li>
+          <li><a href="/speak" onclick="navigate('/speak')" class="hover:opacity-80">Become a Speaker</a></li>
+          <li><a href="/volunteer" onclick="navigate('/volunteer')" class="hover:opacity-80">Volunteer</a></li>
+          <li><a href="/ambassador" onclick="navigate('/ambassador')" class="hover:opacity-80">Ambassador</a></li>
+          <li><a href="/press" onclick="navigate('/press')" class="hover:opacity-80">Press</a></li>
+        </ul>
+      </nav>
+
+      <!-- Resources -->
+      <nav aria-label="Resources">
+        <h4 class="text-white font-semibold mb-3">Resources</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/resources/tools" onclick="navigate('/resources/tools')" class="hover:opacity-80">Tools Landscape</a></li>
+          <li><a href="/resources/future-of-work" onclick="navigate('/resources/future-of-work')" class="hover:opacity-80">Future of Work & Jobs</a></li>
+          <li><a href="/resources/climate" onclick="navigate('/resources/climate')" class="hover:opacity-80">Climate & Resilience</a></li>
+          <li><a href="/resources/diversity" onclick="navigate('/resources/diversity')" class="hover:opacity-80">Diversity & Inclusion</a></li>
+          <li><a href="/resources/for-good" onclick="navigate('/resources/for-good')" class="hover:opacity-80">Innovation for Good</a></li>
+        </ul>
+      </nav>
+
+      <!-- Help -->
+      <nav aria-label="Help">
+        <h4 class="text-white font-semibold mb-3">Help</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/help/contact" onclick="navigate('/help/contact')" class="hover:opacity-80">Contact</a></li>
+          <li><a href="/help/faqs" onclick="navigate('/help/faqs')" class="hover:opacity-80">FAQs</a></li>
+          <li><a href="/help/visa-support" onclick="navigate('/help/visa-support')" class="hover:opacity-80">Visa Support</a></li>
+        </ul>
+
+        <div class="mt-4 space-y-1 text-sm">
+          <a href="mailto:hello@uncodedafrica.org" class="hover:opacity-80">hello@uncodedafrica.org</a><br>
+          <a href="tel:+27663365296" class="hover:opacity-80">+27 66 336 5296</a><br>
+          <a href="https://wa.me/27663365296" target="_blank" rel="noopener" class="text-[#35d07f] hover:opacity-80">
+            Open WhatsApp
+          </a>
+          <div class="text-[#93a3b8]">Johannesburg, South Africa</div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="border-t border-white/10 text-center text-xs text-[#93a3b8] py-4 px-6">
+      © <span id="ua-year"></span> Uncoded Africa. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    // Auto year for footer
+    (function(){var y=document.getElementById('ua-year'); if(y){ y.textContent=new Date().getFullYear(); }})();
+
+    // Fix sticky CTA overlap with footer
+    (function(){
+      const sticky = document.querySelector('.sticky-cta');
+      const footer = document.querySelector('.ua-footer');
+      if(!sticky || !footer) return;
+      const io = new IntersectionObserver(entries=>{
+        entries.forEach(e=>{
+          // When footer is visible, slide the CTA up
+          if(e.isIntersecting){
+            sticky.style.transform = 'translateY(120%)';
+          }else{
+            sticky.style.transform = 'translateY(0)';
+          }
+        });
+      }, {threshold: 0});
+      io.observe(footer);
+    })();
+
+    // Navigation functionality
+    function navigate(path) {
+      // Hide all pages
+      document.querySelectorAll('.page-content').forEach(page => {
+        page.classList.remove('active');
+      });
+      
+      // Show target page
+      const targetPage = getPageId(path);
+      const page = document.getElementById(targetPage);
+      if (page) {
+        page.classList.add('active');
+        // Update page title
+        updatePageTitle(path);
+        // Scroll to top
+        window.scrollTo(0, 0);
+      }
+    }
+    
+    function getPageId(path) {
+      const routes = {
+        '/': 'home-page',
+        '/tickets': 'tickets-page',
+        '/sponsor': 'sponsor-page',
+        '/speak': 'speak-page',
+        '/volunteer': 'volunteer-page',
+        '/ambassador': 'ambassador-page',
+        '/press': 'press-page',
+        '/help/contact': 'help-contact-page',
+        '/help/faqs': 'help-faqs-page',
+        '/help/visa-support': 'help-visa-support-page',
+        '/contact': 'help-contact-page',
+        '/faq': 'help-faqs-page',
+        '/visa': 'help-visa-support-page',
+        '/resources/tools': 'resources-tools-page',
+        '/resources/future-of-work': 'resources-future-work-page',
+        '/resources/climate': 'resources-climate-page',
+        '/resources/diversity': 'resources-diversity-page',
+        '/resources/for-good': 'resources-for-good-page'
+      };
+      return routes[path] || 'home-page';
+    }
+    
+    function updatePageTitle(path) {
+      const titles = {
+        '/': 'Uncoded Africa 2026 - Africa\'s Premier No-Code Summit',
+        '/tickets': 'Get Your Ticket - Uncoded Africa 2026',
+        '/sponsor': 'Sponsor Us - Uncoded Africa 2026',
+        '/speak': 'Become a Speaker - Uncoded Africa 2026',
+        '/volunteer': 'Volunteer - Uncoded Africa 2026',
+        '/ambassador': 'Ambassador Program - Uncoded Africa 2026',
+        '/press': 'Press Accreditation - Uncoded Africa 2026',
+        '/help/contact': 'Contact Us - Uncoded Africa 2026',
+        '/help/faqs': 'FAQs - Uncoded Africa 2026',
+        '/help/visa-support': 'Visa Support - Uncoded Africa 2026',
+        '/contact': 'Contact Us - Uncoded Africa 2026',
+        '/faq': 'FAQs - Uncoded Africa 2026',
+        '/visa': 'Visa Support - Uncoded Africa 2026',
+        '/resources/tools': 'Tools Landscape - Uncoded Africa 2026',
+        '/resources/future-of-work': 'Future of Work & Jobs - Uncoded Africa 2026',
+        '/resources/climate': 'Climate & Resilience - Uncoded Africa 2026',
+        '/resources/diversity': 'Diversity & Inclusion - Uncoded Africa 2026',
+        '/resources/for-good': 'Innovation for Good - Uncoded Africa 2026'
+      };
+      document.getElementById('page-title').textContent = titles[path] || titles['/'];
+    }
+    
+    function scrollToSection(sectionId) {
+      // Make sure we're on home page first
+      navigate('/');
+      // Wait a bit for page transition, then scroll
+      setTimeout(() => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    }
+    
+    // Mobile menu toggle
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('active');
+    });
+    
+    // FAQ Accordion functionality
+    function toggleAccordion(button) {
+      const content = button.nextElementSibling;
+      const isActive = button.classList.contains('active');
+      
+      // Close all accordions
+      document.querySelectorAll('.accordion-header').forEach(header => {
+        header.classList.remove('active');
+        header.nextElementSibling.classList.remove('active');
+      });
+      
+      // If this wasn't active, open it
+      if (!isActive) {
+        button.classList.add('active');
+        content.classList.add('active');
+      }
+    }
+    
+    // Form handling
+    document.addEventListener('DOMContentLoaded', function() {
+      // Handle volunteer age selection for guardian consent
+      const ageSelect = document.getElementById('age-select');
+      const guardianConsent = document.getElementById('guardian-consent');
+      
+      if (ageSelect && guardianConsent) {
+        ageSelect.addEventListener('change', function() {
+          if (this.value === '15-17') {
+            guardianConsent.classList.add('visible');
+          } else {
+            guardianConsent.classList.remove('visible');
+          }
+        });
+      }
+      
+      // Handle all forms
+      const forms = document.querySelectorAll('form[id$="-form"]');
+      forms.forEach(form => {
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          const formId = this.id;
+          const prefix = formId.replace('-form', '');
+          const successEl = document.getElementById(prefix + '-success');
+          const errorEl = document.getElementById(prefix + '-error');
+          
+          // Hide any existing messages
+          if (successEl) successEl.classList.remove('active');
+          if (errorEl) errorEl.classList.remove('active');
+          
+          // Basic validation
+          const requiredFields = this.querySelectorAll('[required]');
+          let isValid = true;
+          
+          requiredFields.forEach(field => {
+            if (!field.value.trim()) {
+              isValid = false;
+              field.style.borderColor = '#ef4444';
+            } else {
+              field.style.borderColor = '';
+            }
+          });
+          
+          // Special validation for checkboxes
+          const requiredCheckboxes = this.querySelectorAll('input[type="checkbox"][required]');
+          requiredCheckboxes.forEach(checkbox => {
+            if (!checkbox.checked) {
+              isValid = false;
+            }
+          });
+          
+          if (isValid) {
+            // Show success message
+            if (successEl) successEl.classList.add('active');
+            
+            // Reset form
+            this.reset();
+            
+            // Hide guardian consent if it was visible
+            if (guardianConsent) guardianConsent.classList.remove('visible');
+            
+          } else {
+            // Show error message
+            if (errorEl) errorEl.classList.add('active');
+          }
+        });
+      });
+    });
+    
+    // Initialize page based on hash or default to home
+    document.addEventListener('DOMContentLoaded', function() {
+      const hash = window.location.hash;
+      if (hash && hash.startsWith('#')) {
+        const sectionId = hash.substring(1);
+        scrollToSection(sectionId);
+      }
+    });
+  </script>
+</body>
+</html>d try again.
+              </div>
+              <button type="submit" class="btn-primary w-full text-lg py-4">
+                Register Interest
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- SPONSOR PAGE -->
+  <div id="sponsor-page" class="page-content">
+    <section class="section-padding pt-24">
+      <div class="max-w-4xl mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl md:text-5xl font-bold heading-font mb-6">
+            <span class="gradient-text">Sponsor Us</span>
+          </h2>
+          <div class="w-24 h-1 gradient-bg mx-auto mb-8"></div>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            Partner with Uncoded Africa to reach 6,000+ participants and millions online. Drive brand leadership, talent access, and measurable impact.
+          </p>
+        </div>
+
+        <div class="glass-card p-8 md:p-12">
+          <div class="form-note">
+            <i class="fas fa-info-circle mr-2"></i>
+            Temporary form endpoint. Swap with production Formspree ID.
+          </div>
+          
+          <form id="sponsor-form" class="grid md:grid-cols-2 gap-6" action="https://formspree.io/f/sponsor123" method="POST">
+            <!-- Hidden fields -->
+            <input type="hidden" name="project" value="Uncoded Africa 2026">
+            <input type="hidden" name="env" value="staging">
+            <input type="text" name="website" class="honeypot">
+            
+            <div>
+              <label class="block text-sm font-medium mb-2">Organization Name *</label>
+              <input type="text" class="form-input" name="organization" required>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium mb-2">Contact Name *</label>
+              <input type="text" class="form-input" name="contactName" required>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium mb-2">Email *</label>
+              <input type="email" class="form-input" name="email" required>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium mb-2">Phone</label>
+              <input type="tel" class="form-input" name="phone">
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium mb-2">Country *</label>
+              <select class="form-select" name="country" required>
+                <option value="">Select country</option>
+                <option value="ZA">South Africa</option>
+                <option value="NG">Nigeria</option>
+                <option value="KE">Kenya</option>
+                <option value="GH">Ghana</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium mb-2">Interest Level</label>
+              <select class="form-select" name="sponsorship_level">
+                <option value="">Select level</option>
+                <option value="title">Title</option>
+                <option value="platinum">Platinum</option>
+                <option value="gold">Gold</option>
+                <option value="silver">Silver</option>
+                <option value="bronze">Bronze</option>
+                <option value="in_kind">In kind</option>
+              </select>
+            </div>
+
+            <div class="md:col-span-2">
+              <label class="block text-sm font-medium mb-2">Goals (select all that apply)</label>
+              <div class="checkbox-group">
+                <div class="checkbox-item">
+                  <input type="checkbox" name="goals" value="brand_visibility">
+                  <span>Brand visibility</span>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" name="goals" value="talent_recruitment">
+                  <span>Talent recruitment</span>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" name="goals" value="csr_impact">
+                  <span>CSR impact</span>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" name="goals" value="pilot_projects">
+                  <span>Pilot projects</span>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" name="goals" value="other">
+                  <span>Other</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="md:col-span-2">
+              <label class="block text-sm font-medium mb-2">Budget Range</label>
+              <select class="form-select" name="budget_range">
+                <option value="">Select range</option>
+                <option value="under_50k">< R50k</option>
+                <option value="50k_100k">R50k–R100k</option>
+                <option value="100k_200k">R100k–R200k</option>
+                <option value="over_200k">R200k+</option>
+              </select>
+            </div>
+
+            <div class="md:col-span-2">
+              <label class="block text-sm font-medium mb-2">Message</label>
+              <textarea class="form-textarea" name="message" placeholder="Tell us about your organization and goals"></textarea>
+            </div>
+
+            <div class="md:col-span-2">
+              <label class="flex items-center mb-4">
+                <input type="checkbox" name="consent" class="mr-3" required>
+                <span class="text-sm">I consent to receive partnership information and understand I can unsubscribe anytime. *</span>
+              </label>
+            </div>
+
+            <div class="md:col-span-2">
+              <div id="sponsor-success" class="success-message">
+                Thanks. Partnerships team will reply within 72 hours.
+              </div>
+              <div id="sponsor-error" class="error-message">
+                Please check the required fields.
+              </div>
+              <button type="submit" class="btn-primary w-full text-lg py-4">
+                Submit Partnership Inquiry
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- SPEAK PAGE -->
+  <div id="speak-page" class="page-content">
+    <section class="section-padding pt-24">
+      <div class="max-w-4xl mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl md:text-5xl font-bold heading-font mb-6">
+            <span class="gradient-text">Become a Speaker</span>
+          </h2>
+          <div class="w-24 h-1 gradient-bg mx-auto mb-8"></div>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            Share practical lessons on building with no code, low code, and AI. We welcome founders, product leaders, creators, educators, and public sector innovators.
+          </p>
+        </div>
+
+        <div class="glass-card p-8 md:p-12">
+          <div class="form-note">
+            <i class="fas fa-info-circle mr-2"></i>
+            Temporary form endpoint. Swap with production Formspree ID.
+          </div>
+          
+          <form id="speak-form" class="grid md:grid-cols-2 gap-6" action="https://formspree.io/f/speak123" method="POST">
+            <!-- Hidden fields -->
+            <input type="hidden" name="project" value="Uncoded Africa 2026">
+            <input type="hidden" name="env" value="staging">
+            <input type="text" name="website" class="honeypot">
+            
+            <div>
+              <label class="block text-sm font-medium mb-2">Full Name *</label>
+              <input type="text" class="form-input" name="fullName" required>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium mb-2">Email *</label>
+              <input type="email" class="form-input" name="email" required>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium mb-2">Phone</label>
+              <input type="tel" class="form-input" name="phone">
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium mb-2">Country *</label>
+              <select class="form-select" name="country" required>
+                <option value="">Select country</option>
+                <option value="ZA">South Africa</option>
+                <option value="NG">Nigeria</option>
+                <option value="KE">Kenya</option>
+                <option value="GH">Ghana</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="md:col-span-2">
+              <label class="block text-sm font-medium mb-2">Bio or LinkedIn URL *</label>
+              <textarea class="form-textarea" name="bio" placeholder="Brief bio or your LinkedIn profile URL" required></textarea>
+            </div>
+
+            <div class="md:col-span-2">
+              <label class="block text-sm font-medium mb-2">Proposed Topic *</label>
+              <textarea class="form-textarea" name="topic" placeholder="What would you like to speak about?" required></textarea>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium mb-2">Format</label>
+              <select class="form-select" name="format">
+                <option value="">Select format</option>
+                <option value="talk">Talk</option>
+                <option value="workshop">Workshop</option>
+                <option value="panel">Panel</option>
+                <option value="mentor">Mentor</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium mb-2">Audience Level</label>
+              <select class="form-select" name="audience_level">
+                <option value="">Select level</option>
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+              </select>
+            </div>
+
+            <div class="md:col-span-2">
+              <label class="block text-sm font-medium mb-2">Prior Talks Link</label>
+              <input type="url" class="form-input" name="prior_talks" placeholder="Link to previous speaking engagements (optional)">
+            </div>
+
+            <div class="md:col-span-2">
+              <label class="flex items-center mb-4">
+                <input type="checkbox" name="consent" class="mr-3" required>
+                <span class="text-sm">I consent to be contacted about speaking opportunities and understand I can unsubscribe anytime. *</span>
+              </label>
+            </div>
+
+            <div class="md:col-span-2">
+              <div id="speak-success" class="success-message">
+                Thank you. We will contact you within 72 hours.
+              </div>
+              <div id="speak-error" class="error-message">
+                Please check the required fields.
+              </div>
+              <button type="submit" class="btn-primary w-full text-lg py-4">
+                Submit Speaker Application
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- VOLUNTEER PAGE -->
+  <div id="volunteer-page" class="page-content">
+    <section class="section-padding pt-24">
+      <div class="max-w-4xl mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl md:text-5xl font-bold heading-font mb-6">
+            <span class="gradient-text">Volunteer</span>
+          </h2>
+          <div class="w-24 h-1 gradient-bg mx-auto mb-8"></div>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+            Help deliver a 7-day transformation week. Volunteers receive free access to sessions, a certificate, and networking opportunities.
+          </p>
+        </div>
+
+        <div class="glass-card p-8 md:p-12">
+          <div class="form-note">
+            <i class="fas fa-info-circle mr-2"></i>
+            Temporary form endpoint. Swap with production Formspree ID.
+          </div>
+          
+          <form id="volunteer-form" class="grid md:grid-cols-2 gap-6" action="https://formspree.io/f/volunteer123" method="POST">
+            <!-- Hidden fields -->
+            <input type="hidden" name="project" value="Uncoded Africa 2026">
+            <input type="hidden" name="env" value="staging">
+            <input type="text" name="website" class="honeypot">
+            
+            <div>
+              <label class="block text-sm font-medium mb-2">Full Name *</label>
+              <input type="text" class="form-input" name="fullName" required>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium mb-2">Email *</label>
+              <input type="email" class="form-input" name="email" required>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium mb-2">Phone *</label>
+              <input type="tel" class="form-input" name="phone" required>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium mb-2">City *</label>
+              <input type="text" class="form-input" name="city" required>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium mb-2">Age Confirmation *</label>
+              <select class="form-select" name="age_group" id="age-select" required>
+                <option value="">Select age group</option>
+                <option value="15-17">15–17</option>
+                <option value="18-24">18–24</option>
+                <option value="25+">25+</option>
+              </select>
+            </div>
+
+            <div class="md:col-span-2">
+              <label class="block text-sm font-medium mb-2">Skills (select all that apply)</label>
+              <div class="checkbox-group">
+                <div class="checkbox-item">
+                  <input type="checkbox" name="skills" value="registration">
+                  <span>Registration</span>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" name="skills" value="ops">
+                  <span>Ops</span>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" name="skills" value="av">
+                  <span>AV</span>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" name="skills" value="content">
+                  <span>Content</span>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" name="skills" value="social_media">
+                  <span>Social Media</span>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" name="skills" value="community">
+                  <span>Community</span>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" name="skills" value="mentorship">
+                  <span>Mentorship</span>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" name="skills" value="photography">
+                  <span>Photography</span>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" name="skills" value="first_aid">
+                  <span>First aid</span>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" name="skills" value="other">
+                  <span>Other</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="md:col-span-2">
+              <label class="block text-sm font-medium mb-2">Availability (select dates you can help)</label>
+              <div class="checkbox-group">
+                <div class="checkbox-item">
+                  <input type="checkbox" name="availability" value="mar_29">
+                  <span>Mar 29</span>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" name="availability" value="mar_30">
+                  <span>Mar 30</span>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" name="availability" value="mar_31">
+                  <span>Mar 31</span>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" name="availability" value="apr_1">
+                  <span>Apr 1</span>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" name="availability" value="apr_2">
+                  <span>Apr 2</span>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" name="availability" value="apr_3">
+                  <span>Apr 3</span>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" name="availability" value="apr_4">
+                  <span>Apr 4</span>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" name="availability" value="apr_5">
+                  <span>Apr 5</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="md:col-span-2">
+              <label class="block text-sm font-medium mb-2">Why do you want to volunteer?</label>
+              <textarea class="form-textarea" name="motivation" placeholder="Tell us about your motivation to volunteer"></textarea>
+            </div>
+
+            <div class="md:col-span-2" id="guardian-consent-section">
+              <div class="guardian-consent" id="guardian-consent">
+                <p class="text-yellow-400 text-sm mb-3">
+                  <i class="fas fa-exclamation-triangle mr-2"></i>
+                  For volunteers aged 15-17, guardian consent is required. A guardian signature will be collected on site.
+                </p>
+                <label class="flex items-center">
+                  <input type="checkbox" name="guardian_consent" class="mr-3">
+                  <span class="text-sm">My guardian consents to my participation as a volunteer</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="md:col-span-2">
+              <label class="flex items-center mb-4">
+                <input type="checkbox" name="consent" class="mr-3" required>
+                <span class="text-sm">I consent to be contacted about volunteering and understand I can unsubscribe anytime. *</span>
+              </label>
+            </div>
+
+            <div class="md:col-span-2">
+              <div id="volunteer-success" class="success-message">
+                Thank you. We will contact you within 72 hours.
+              </div>
+              <div id="volunteer-error" class="error-message">
+                Please check the required fields.
+              </div>
+              <button type="submit" class="btn-primary w-full text-lg py-4">
+                Submit Volunteer Application
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- AMBASSADOR PAGE -->
+  <div id="ambassador-page" class="page-content">
+    <section class="section-padding pt-24">
+      <div class="max-w-4xl mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl md:text-5xl font-bold heading-font mb-6">
+            <span class="gradient-text">Ambassador</span>
+          </h2>
+          <div class="w-24 h-1 gradient-bg mx-auto mb-8"></div>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Lead the Uncoded Africa movement in your city, university, or country. Ambassadors mobilize communities, host meetups, and support outreach.
+          </p>
+          
+          <div class="glass-card p-6 mb-8">
+            <h3 class="text-xl font-bold text-green-400 mb-4">Benefits</h3>
+            <p class="text-gray-300">
+              Recognition on our website • Priority access to events • Private community calls • Free ambassador training
+            </p>
+          </div>
+        </div>
+
+        <div class="glass-card p-8 md:p-12">
+          <div class="form-note">
+            <i class="fas fa-info-circle mr-2"></i>
+            Temporary form endpoint. Swap with production Formspree ID.
+          </div>
+          
+          <form id="ambassador-form" class="grid md:grid-cols-2 gap-6" action="https://formspree.io/f/ambassador123" method="POST">
+            <!-- Hidden fields -->
+            <input type="hidden" name="project" value="Uncoded Africa 2026">
+            <input type="hidden" name="env" value="staging">
+            <input type="text" name="website" class="honeypot">
+            
+            <div>
+              <label class="block text-sm font-medium mb-2">Full Name *</label>
+              <input type="text" class="form-input" name="fullName" required>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium mb-2">Email *</label>
+              <input type="email" class="form-input" name="email" required>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium mb-2">Phone *</label>
+              <input type="tel" class="form-input" name="phone" required>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium mb-2">Country *</label>
+              <select class="form-select" name="country" required>
+                <option value="">Select country</option>
+                <option value="ZA">South Africa</option>
+                <option value="NG">Nigeria</option>
+                <option value="KE">Kenya</option>
+                <option value="GH">Ghana</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium mb-2">City *</label>
+              <input type="text" class="form-input" name="city" required>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium mb-2">Affiliation (school or organization)</label>
+              <input type="text" class="form-input" name="affiliation">
+            </div>
+
+            <div class="md:col-span-2">
+              <label class="block text-sm font-medium mb-2">Describe your community or audience</label>
+              <textarea class="form-textarea" name="reach" placeholder="Tell us about the community you can reach"></textarea>
+            </div>
+
+            <div class="md:col-span-2">
+              <label class="block text-sm font-medium mb-2">Activities you can lead (select all that apply)</label>
+              <div class="checkbox-group">
+                <div class="checkbox-item">
+                  <input type="checkbox" name="activities" value="campus_club">
+                  <span>Campus club</span>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" name="activities" value="meetup">
+                  <span>Meetup</span>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" name="activities" value="workshop">
+                  <span>Host a workshop</span>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" name="activities" value="social_media_group">
+                  <span>Social media group</span>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" name="activities" value="partnerships">
+                  <span>Partnerships</span>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" name="activities" value="other">
+                  <span>Other</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="md:col-span-2">
+              <label class="block text-sm font-medium mb-2">LinkedIn or website</label>
+              <input type="url" class="form-input" name="profile_url" placeholder="Your LinkedIn or website URL (optional)">
+            </div>
+
+            <div class="md:col-span-2">
+              <label class="flex items-center mb-4">
+                <input type="checkbox" name="consent" class="mr-3" required>
+                <span class="text-sm">I consent to be contacted about ambassador opportunities and understand I can unsubscribe anytime. *</span>
+              </label>
+            </div>
+
+            <div class="md:col-span-2">
+              <div id="ambassador-success" class="success-message">
+                Thank you. We will contact you within 72 hours.
+              </div>
+              <div id="ambassador-error" class="error-message">
+                Please check the required fields an
